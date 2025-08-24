@@ -8,16 +8,6 @@ const Footer = () => {
       name: 'PERAK',
       url: 'https://goo.gl/maps/iRwwNmCwdux9ZpfC6',
       icon: Building2
-    },
-    {
-      name: 'KUALA LUMPUR', 
-      url: 'https://maps.app.goo.gl/LZ94GM2gRjVtHpUz9',
-      icon: Building2
-    },
-    {
-      name: 'PENANG',
-      url: 'https://www.google.com/maps/place/5,+Lorong+Abbas+1,+10200+Tanjung+Bungah,+Pulau+Pinang/@5.4648078,100.2971642,17z/data=!3m1!4b1!4m6!3m5!1s0x304ac2d729b95e09:0x29effb1538d99ca8!8m2!3d5.4648025!4d100.2997391!16s%2Fg%2F11v0__yr1l?entry=ttu',
-      icon: Building2
     }
   ];
 
@@ -34,12 +24,12 @@ const Footer = () => {
             Visit Our Offices
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Multiple locations to serve you better across Malaysia
+            Our office location to serve you better in Malaysia
           </p>
         </div>
 
         {/* Location Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 mb-12 sm:mb-16 max-w-sm mx-auto">
           {locations.map((location) => (
             <Card key={location.name} className="group hover:shadow-lg transition-all duration-300 border border-border/50 hover:border-primary/20">
               <CardContent className="p-6 text-center">

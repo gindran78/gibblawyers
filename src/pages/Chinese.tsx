@@ -167,14 +167,6 @@ const Chinese = () => {
                       <MapPin className="w-5 h-5" />
                       <span>霹雳州 (PERAK)</span>
                     </div>
-                    <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                      <MapPin className="w-5 h-5" />
-                      <span>吉隆坡 (KUALA LUMPUR)</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                      <MapPin className="w-5 h-5" />
-                      <span>槟城 (PENANG)</span>
-                    </div>
                   </div>
                 </Card>
 
