@@ -52,6 +52,23 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Gibb brand colors
+				'gibb-gold': {
+					DEFAULT: 'hsl(var(--gibb-gold))',
+					light: 'hsl(var(--gibb-gold-light))',
+					dark: 'hsl(var(--gibb-gold-dark))'
+				},
+				'gibb-bronze': {
+					DEFAULT: 'hsl(var(--gibb-bronze))',
+					dark: 'hsl(var(--gibb-bronze-dark))'
+				},
+				'gibb-gray': {
+					50: 'hsl(var(--gibb-gray-50))',
+					100: 'hsl(var(--gibb-gray-100))',
+					200: 'hsl(var(--gibb-gray-200))',
+					800: 'hsl(var(--gibb-gray-800))',
+					900: 'hsl(var(--gibb-gray-900))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
