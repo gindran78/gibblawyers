@@ -265,7 +265,7 @@ const Services = () => {
                             onClick={() => window.open('tel:+60125050713', '_self')}
                           >
                             <Shield className="w-5 h-5 mr-3" />
-                            Mr William Balasingam: +60125050713
+                            Call Now: +60125050713
                           </Button>
                         </div>
                       </div>
