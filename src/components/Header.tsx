@@ -59,8 +59,22 @@ const Header = () => {
               </Link>
             ))}
             <div className="flex items-center space-x-4 text-xs ml-4">
-              <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">中文</span>
-              <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">한국어</span>
+              <Link 
+                to="/chinese" 
+                className={`transition-colors cursor-pointer ${
+                  isActive('/chinese') ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+                }`}
+              >
+                中文
+              </Link>
+              <Link 
+                to="/korean" 
+                className={`transition-colors cursor-pointer ${
+                  isActive('/korean') ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+                }`}
+              >
+                한국어
+              </Link>
             </div>
           </nav>
 
@@ -107,8 +121,24 @@ const Header = () => {
                   <div className="w-6 h-px bg-primary/40"></div>
                 </div>
                 <div className="flex items-center space-x-4 text-xs">
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">中文</span>
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">한국어</span>
+                  <Link 
+                    to="/chinese" 
+                    className={`transition-colors cursor-pointer ${
+                      isActive('/chinese') ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    中文
+                  </Link>
+                  <Link 
+                    to="/korean" 
+                    className={`transition-colors cursor-pointer ${
+                      isActive('/korean') ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    한국어
+                  </Link>
                 </div>
               </div>
             </nav>
