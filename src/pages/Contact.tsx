@@ -3,8 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Mail, ExternalLink, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const offices = [
@@ -14,7 +13,7 @@ const Contact = () => {
         {
           address: "55, Lebuh Pearl, Fair Park, 31400, Ipoh, Perak, Malaysia.",
           phone: "+605 547 1313",
-          fax: "+605 548 1313", 
+          fax: "+605 548 1313",
           email: "admin@gibblawyers.com",
           mapUrl: "https://www.google.com/maps/place/55,+Lebuh+Pearl,+Taman+Fair+Park,+31400+Ipoh,+Perak/@4.608316,101.0942946,17z/data=!3m1!4b1!4m5!3m4!1s0x31caecf28a4827fb:0x130c5b0b39d11131!8m2!3d4.6083107!4d101.0964833"
         },
@@ -27,13 +26,13 @@ const Contact = () => {
       ]
     },
     {
-      name: "Kuala Lumpur Office", 
+      name: "Kuala Lumpur Office",
       addresses: [
         {
           address: "E-23-3, Menara Suezcap, KL Gateway Office, Jalan Kerinchi, 59200 Kuala Lumpur, Malaysia.",
           phone: "+603 2856 9771",
           fax: "+603 2856 9772",
-          email: "admin-kl@gibblawyers.com", 
+          email: "admin-kl@gibblawyers.com",
           mapUrl: "https://maps.app.goo.gl/LZ94GM2gRjVtHpUz9"
         }
       ]
@@ -67,87 +66,96 @@ const Contact = () => {
   return (
     <Layout 
       title="Contact Us - Gibb Lawyers"
-      description="In case you have some questions, feel free to call, email or even visit us. You can even drop us a line or two about any enquiries you might have."
+      description="In case you have some questions, feel free to call, email or even visit us. Trust your need, knowing we will succeed."
     >
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-secondary/30 to-background py-16 lg:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <img src="/images/line.png" alt="" className="h-6" />
+      <section className="relative bg-gradient-to-br from-secondary/30 to-background py-12 sm:py-16 lg:py-24 xl:py-32">
+        <div className="container mx-auto px-3 sm:px-4">
+          {/* Office Image */}
+          <div className="mb-8 sm:mb-12 lg:mb-16">
+            <div className="relative max-w-5xl mx-auto">
+              <img 
+                src="/images/office-main.jpg" 
+                alt="Gibb Lawyers Office Interior" 
+                className="w-full h-48 sm:h-64 lg:h-80 xl:h-96 object-cover rounded-lg shadow-elegant"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"></div>
+            </div>
           </div>
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Contact Us
-          </h1>
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            In case you have some questions, feel free to call, email or even visit us. You can even drop us a line or two about any enquiries you might have. Trust your need, knowing we will succeed.
-          </p>
+          
+          <div className="text-center max-w-4xl mx-auto px-2">
+            <div className="flex justify-center mb-6 sm:mb-8">
+              <div className="w-16 sm:w-20 h-px bg-primary/60"></div>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 sm:mb-8 leading-tight">
+              Contact Us
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+              In case you have some questions, feel free to call, email or even visit us. You can even drop us a line or two about any enquiries you might have. Trust your need, knowing we will succeed.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Office Locations */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {offices.map((office, index) => (
-              <div key={index} className="space-y-6">
-                <div className="flex justify-center lg:justify-start">
-                  <img src="/images/window.png" alt="Office" className="h-20 object-contain" />
-                </div>
-                
-                <h2 className="text-2xl font-bold text-primary text-center lg:text-left">
-                  {office.name}
-                </h2>
-                
-                {office.addresses.map((addr, addrIndex) => (
-                  <Card key={addrIndex} className="border border-border/50">
-                    <CardContent className="p-6 space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <p className="text-muted-foreground">{addr.address}</p>
-                      </div>
+      {/* Offices Grid */}
+      <section className="py-12 sm:py-16 lg:py-24 xl:py-32">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+            {offices.map((office, officeIndex) => (
+              <div key={officeIndex} className="space-y-4 sm:space-y-6">
+                {office.addresses.map((location, locationIndex) => (
+                  <Card key={locationIndex} className="border border-border/50 hover:shadow-elegant transition-all duration-300">
+                    <CardHeader className="pb-4 sm:pb-6">
+                      <CardTitle className="text-xl sm:text-2xl text-foreground flex items-center gap-2">
+                        <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+                        {office.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0 space-y-4">
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                        {location.address}
+                      </p>
                       
-                      <div className="flex items-center space-x-3">
-                        <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                        <a 
-                          href={`tel:${addr.phone}`}
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          T: {addr.phone}
-                        </a>
-                      </div>
-                      
-                      {addr.fax && (
-                        <div className="flex items-center space-x-3">
-                          <Phone className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-                          <span className="text-muted-foreground">F: {addr.fax}</span>
+                      <div className="space-y-2 sm:space-y-3">
+                        <div className="flex items-center gap-3">
+                          <Phone className="h-4 w-4 text-primary flex-shrink-0" />
+                          <a 
+                            href={`tel:${location.phone}`} 
+                            className="text-sm sm:text-base text-foreground hover:text-primary transition-colors underline-offset-4 hover:underline min-h-[44px] flex items-center"
+                          >
+                            {location.phone}
+                          </a>
                         </div>
-                      )}
-                      
-                      <div className="flex items-center space-x-3">
-                        <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                        <a 
-                          href={`mailto:${addr.email}`}
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          E: {addr.email}
-                        </a>
+                        
+                        {location.fax && (
+                          <div className="flex items-center gap-3">
+                            <Phone className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                            <span className="text-sm sm:text-base text-muted-foreground">F: {location.fax}</span>
+                          </div>
+                        )}
+                        
+                        <div className="flex items-center gap-3">
+                          <Mail className="h-4 w-4 text-primary flex-shrink-0" />
+                          <a 
+                            href={`mailto:${location.email}`} 
+                            className="text-sm sm:text-base text-foreground hover:text-primary transition-colors underline-offset-4 hover:underline min-h-[44px] flex items-center break-all"
+                          >
+                            {location.email}
+                          </a>
+                        </div>
                       </div>
                       
-                      <Button 
-                        variant="outline"
-                        size="sm"
-                        asChild
-                      >
+                      <div className="pt-2">
                         <a
-                          href={addr.mapUrl}
+                          href={location.mapUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center space-x-2"
+                          className="inline-flex items-center gap-2 text-sm sm:text-base text-primary hover:text-primary/80 transition-colors font-medium underline-offset-4 hover:underline min-h-[44px] py-2"
                         >
-                          <span>MAP</span>
-                          <ExternalLink className="h-3 w-3" />
+                          <ExternalLink className="h-4 w-4" />
+                          VIEW ON MAP
                         </a>
-                      </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 ))}
@@ -157,30 +165,28 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Notary Public Service */}
-      <section className="py-16 lg:py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+      {/* Notary Services */}
+      <section className="py-12 sm:py-16 lg:py-24 xl:py-32 bg-secondary/30">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-2xl mx-auto">
-            <div className="flex justify-center mb-6">
-              <img src="/images/window.png" alt="Notary Service" className="h-20 object-contain" />
-            </div>
-            
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary text-center">
+            <Card className="border border-border/50">
+              <CardHeader className="text-center pb-4 sm:pb-6">
+                <CardTitle className="text-xl sm:text-2xl lg:text-3xl text-foreground">
                   Notary Public Service (Ipoh)
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <p className="text-lg font-medium text-foreground">William Balasingam</p>
-                <div className="flex items-center justify-center space-x-3">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <a 
-                    href="tel:+60125050713"
-                    className="text-muted-foreground hover:text-primary transition-colors font-medium"
-                  >
-                    T: +6012 505 0713
-                  </a>
+              <CardContent className="pt-0 text-center space-y-4">
+                <div className="space-y-2">
+                  <p className="text-base sm:text-lg font-medium text-foreground">William Balasingam</p>
+                  <div className="flex items-center justify-center gap-3">
+                    <Phone className="h-4 w-4 text-primary flex-shrink-0" />
+                    <a 
+                      href="tel:+601250507138" 
+                      className="text-sm sm:text-base text-foreground hover:text-primary transition-colors underline-offset-4 hover:underline min-h-[44px] flex items-center"
+                    >
+                      +6012 505 0713
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -188,63 +194,112 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
+      {/* Contact Form Section */}
+      <section className="py-12 sm:py-16 lg:py-24 xl:py-32">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-2xl mx-auto">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl text-center">Send us a message</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your name" />
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Get In Touch
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                Drop us a message and we'll get back to you as soon as possible.
+              </p>
+            </div>
+            
+            <Card className="border border-border/50">
+              <CardContent className="p-6 sm:p-8">
+                <form className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        Name *
+                      </label>
+                      <Input 
+                        id="name" 
+                        type="text" 
+                        required 
+                        className="min-h-[44px]"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                        Phone
+                      </label>
+                      <Input 
+                        id="phone" 
+                        type="tel" 
+                        className="min-h-[44px]"
+                        placeholder="Your phone number"
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" type="tel" placeholder="Your phone number" />
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      Email Address *
+                    </label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      required 
+                      className="min-h-[44px]"
+                      placeholder="your.email@example.com"
+                    />
                   </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="Your email address" />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" placeholder="Subject of your enquiry" />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Your message..."
-                    className="min-h-[120px]"
-                  />
-                </div>
-                
-                <Button className="w-full" size="lg">
-                  Send Message
-                </Button>
+                  
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                      Subject
+                    </label>
+                    <Input 
+                      id="subject" 
+                      type="text" 
+                      className="min-h-[44px]"
+                      placeholder="Brief subject of your inquiry"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      Message *
+                    </label>
+                    <Textarea 
+                      id="message" 
+                      required 
+                      rows={5}
+                      className="resize-none"
+                      placeholder="Please describe your legal inquiry or questions..."
+                    />
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                    <Button 
+                      type="submit" 
+                      className="min-h-[44px] w-full sm:w-auto px-6 py-3 font-semibold"
+                    >
+                      Send Message
+                    </Button>
+                    <Button 
+                      asChild
+                      variant="outline"
+                      className="min-h-[44px] w-full sm:w-auto px-6 py-3 font-semibold"
+                    >
+                      <a
+                        href="https://api.whatsapp.com/send/?phone=60124775779&text=Hi+there&app_absent=0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <MessageCircle className="h-4 w-4" />
+                        WhatsApp Us
+                      </a>
+                    </Button>
+                  </div>
+                </form>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Office Interior Image */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center">
-            <img 
-              src="/images/office-interior.jpg" 
-              alt="Gibb Lawyers Office Interior" 
-              className="max-w-full h-auto rounded-lg shadow-lg"
-            />
           </div>
         </div>
       </section>

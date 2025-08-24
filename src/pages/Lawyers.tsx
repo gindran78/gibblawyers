@@ -1,73 +1,74 @@
 import Layout from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
+import { ExternalLink } from 'lucide-react';
 
 const Lawyers = () => {
   const lawyers = [
     {
       name: "ZORINAH BT.MOHD SOBRI",
-      title: "MANAGING PARTNER",
+      position: "MANAGING PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_PuanZ_thumbnail.jpg",
-      link: "https://gibblawyers.com/wp/zorinah-bt-mohd-sobri/"
+      url: "https://gibblawyers.com/wp/zorinah-bt-mohd-sobri/"
     },
     {
-      name: "E. ERNEST BALASINGAM", 
-      title: "SENIOR PARTNER",
+      name: "E. ERNEST BALASINGAM",
+      position: "SENIOR PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_ERNEST_thumbnail.jpg",
-      link: "https://gibblawyers.com/wp/e-ernest-balasingam/"
+      url: "https://gibblawyers.com/wp/e-ernest-balasingam/"
     },
     {
       name: "EDWIN SEIBEL (A.M.P)",
-      title: "SENIOR PARTNER", 
+      position: "SENIOR PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_ES_thumbnail-copy.jpg",
-      link: "https://gibblawyers.com/wp/ediwn-seibel-a-m-p/"
+      url: "https://gibblawyers.com/wp/ediwn-seibel-a-m-p/"
     },
     {
       name: "KENNY CHAN",
-      title: "SENIOR PARTNER",
-      image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_CKL_thumbnail-copy.jpg", 
-      link: "https://gibblawyers.com/wp/kenny-chan/"
+      position: "SENIOR PARTNER",
+      image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_CKL_thumbnail-copy.jpg",
+      url: "https://gibblawyers.com/wp/kenny-chan/"
     },
     {
       name: "TERENCE NAIDU",
-      title: "SENIOR PARTNER",
+      position: "SENIOR PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_TN_thumbnail.jpg",
-      link: "https://gibblawyers.com/wp/terence-naidu/"
+      url: "https://gibblawyers.com/wp/terence-naidu/"
     },
     {
-      name: "YAP KOK KHEONG", 
-      title: "PARTNER",
+      name: "YAP KOK KHEONG",
+      position: "PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_VIC_thumbnail.jpg",
-      link: "https://gibblawyers.com/wp/yap-kok-kheong/"
+      url: "https://gibblawyers.com/wp/yap-kok-kheong/"
     },
     {
       name: "LIM POH LEONG",
-      title: "PARTNER",
+      position: "PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_LPL_thumbnail-copy.jpg",
-      link: "https://gibblawyers.com/wp/lim-poh-leong/"
+      url: "https://gibblawyers.com/wp/lim-poh-leong/"
     },
     {
       name: "ONG BEE KHOON",
-      title: "PARTNER", 
+      position: "PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_OBK_thumbnail.jpg",
-      link: "https://gibblawyers.com/wp/ong-bee-khoon/"
+      url: "https://gibblawyers.com/wp/ong-bee-khoon/"
     },
     {
       name: "Benjamin Chwee Yew Keng",
-      title: "PARTNER",
+      position: "PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2023/05/GIBB_Benjamin_thumbnail.jpg",
-      link: "https://gibblawyers.com/wp/benjamin-chwee-yew-keng/"
+      url: "https://gibblawyers.com/wp/benjamin-chwee-yew-keng/"
     },
     {
       name: "Nur Liyana Izzati Binti Abd Aziz",
-      title: "PARTNER",
-      image: "https://gibblawyers.com/wp-content/uploads/2023/05/GIBB_Liyana_thumbnail.jpg", 
-      link: "https://gibblawyers.com/wp/nur-liyana-izzati-binti-abd-aziz/"
+      position: "PARTNER",
+      image: "https://gibblawyers.com/wp-content/uploads/2023/05/GIBB_Liyana_thumbnail.jpg",
+      url: "https://gibblawyers.com/wp/nur-liyana-izzati-binti-abd-aziz/"
     },
     {
       name: "HO YI YERN",
-      title: "PARTNER",
+      position: "PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2024/05/GIBB_HYY_thumbnail.jpg",
-      link: "https://gibblawyers.com/wp/ho-yi-yern/"
+      url: "https://gibblawyers.com/wp/ho-yi-yern/"
     }
   ];
 
@@ -77,57 +78,75 @@ const Lawyers = () => {
       description="We invest in our people to be better stakeholders for our Client-Partners. Our lawyers are vastly experienced in their array of expertise."
     >
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-secondary/30 to-background py-16 lg:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <img src="/images/line.png" alt="" className="h-6" />
+      <section className="relative bg-gradient-to-br from-secondary/30 to-background py-12 sm:py-16 lg:py-24 xl:py-32">
+        <div className="container mx-auto px-3 sm:px-4 text-center">
+          <div className="max-w-4xl mx-auto px-2">
+            <div className="flex justify-center mb-6 sm:mb-8">
+              <div className="w-16 sm:w-20 h-px bg-primary/60"></div>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 sm:mb-8 leading-tight">
+              Meet Our Lawyers
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+              We invest in our people to be better stakeholders for our Client-Partners. Our lawyers are vastly experienced in their array of expertise, dedicated to our clients' cause and committed to the betterment of the community.
+            </p>
           </div>
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Meet Our Lawyers
-          </h1>
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            We invest in our people to be better stakeholders for our Client-Partners. Our lawyers are vastly experienced in their array of expertise, dedicated to our clients' cause and committed to the betterment of the community.
-          </p>
         </div>
       </section>
 
       {/* Lawyers Grid */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+      <section className="py-12 sm:py-16 lg:py-24 xl:py-32">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             {lawyers.map((lawyer, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-lg transition-all duration-300 border border-border/50 hover:border-primary/20"
+              <a
+                key={index}
+                href={lawyer.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
               >
-                <CardContent className="p-0">
-                  <a 
-                    href={lawyer.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <div className="relative overflow-hidden rounded-t-lg">
-                      <img
-                        src={lawyer.image}
-                        alt={lawyer.name}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Card className="h-full hover:shadow-elegant hover:border-primary/20 transition-all duration-500 border border-border/50 overflow-hidden">
+                  <div className="aspect-[3/4] relative overflow-hidden">
+                    <img
+                      src={lawyer.image}
+                      alt={`${lawyer.name} - ${lawyer.position}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading={index < 6 ? "eager" : "lazy"}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <ExternalLink className="h-5 w-5 text-white" />
                     </div>
-                    <div className="p-6 text-center">
-                      <h3 className="font-bold text-foreground mb-2 leading-tight">
-                        {lawyer.name}
-                      </h3>
-                      <p className="text-sm text-primary font-medium">
-                        {lawyer.title}
-                      </p>
-                    </div>
-                  </a>
-                </CardContent>
-              </Card>
+                  </div>
+                  <CardContent className="p-4 sm:p-6 text-center space-y-2">
+                    <h3 className="font-bold text-sm sm:text-base lg:text-lg text-foreground group-hover:text-primary transition-colors leading-tight">
+                      {lawyer.name}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider font-medium">
+                      {lawyer.position}
+                    </p>
+                  </CardContent>
+                </Card>
+              </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-12 sm:py-16 lg:py-24 xl:py-32 bg-secondary/30">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8 sm:space-y-12 px-2">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="w-16 sm:w-20 h-px bg-primary/60 mx-auto"></div>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">
+                Our Commitment
+              </h2>
+              <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground font-medium leading-relaxed">
+                We invest in our people to serve our stakeholders better.
+              </p>
+            </div>
           </div>
         </div>
       </section>
