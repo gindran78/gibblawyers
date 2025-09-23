@@ -1,5 +1,4 @@
 import Layout from '../components/Layout';
-import gibbLogo from '../assets/gibb-logo.png';
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
 
@@ -14,7 +13,7 @@ const UnderConstruction = () => {
           {/* Logo */}
           <div className="mb-12">
             <img 
-              src={gibbLogo} 
+              src="/images/gibb-logo.png" 
               alt="Gibb & Co Logo" 
               className="h-16 w-auto mx-auto"
             />
