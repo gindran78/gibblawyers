@@ -19,60 +19,57 @@ import { Link } from 'react-router-dom';
 
 const ZorinahProfile = () => {
   const specializations = [
-    "Corporate Law",
-    "Banking & Finance", 
-    "Real Estate",
-    "Mergers & Acquisitions",
-    "Commercial Litigation",
-    "Securities Law"
-  ];
-
-  const achievements = [
-    "Successfully led over 500 corporate transactions",
-    "Recognized by Malaysian Legal Awards 2023",
-    "Expert advisor on banking regulations",
-    "Speaker at International Corporate Law Conference",
-    "Published articles in Malaysian Bar Journal"
+    "Civil Litigation",
+    "Commercial Litigation", 
+    "Corporate Advisory",
+    "Contract Advisory",
+    "Probate & Estate Administration",
+    "Family & Matrimonial Matters",
+    "Property Transactions",
+    "Dispute Resolution"
   ];
 
   const education = [
     {
       degree: "Bachelor of Laws (Hons)",
       institution: "University of Malaya",
-      year: "1995"
+      year: "1987"
     },
     {
-      degree: "Certificate in Legal Practice",
-      institution: "Legal Profession Qualifying Board",
-      year: "1995"
+      degree: "Advocate & Solicitor",
+      institution: "High Court of Malaya",
+      year: "Called to Bar in 1988"
     }
   ];
 
   const experience = [
     {
-      period: "2010 - Present",
-      role: "Managing Partner",
-      company: "Gibb & Co",
-      description: "Leading the firm's strategic direction and overseeing major corporate transactions"
+      period: "1988 - Present",
+      role: "Partner",
+      company: "Gibb & Co., Advocates & Solicitors",
+      description: "Throughout my practice, I have represented individuals and corporations, providing guidance on property transactions, commercial contracts, and dispute resolution. My approach is client-centric, pragmatic, and built on trust and long-term relationships."
+    }
+  ];
+
+  const professionalValues = [
+    {
+      title: "Integrity",
+      description: "Upholding honesty and ethical standards in every matter"
     },
     {
-      period: "2000 - 2010",
-      role: "Senior Associate",
-      company: "Gibb & Co",
-      description: "Specialized in banking law and corporate finance matters"
+      title: "Professionalism",
+      description: "Maintaining the highest standards of legal excellence"
     },
     {
-      period: "1995 - 2000",
-      role: "Associate",
-      company: "Gibb & Co",
-      description: "Started career focusing on general commercial law and real estate"
+      title: "Service",
+      description: "Dedicated to serving clients and mentoring future practitioners"
     }
   ];
 
   return (
     <Layout 
-      title="Zorinah Bt. Mohd Sobri - Managing Partner | Gibb Lawyers"
-      description="Meet Zorinah Bt. Mohd Sobri, Managing Partner at Gibb & Co with 29+ years of experience in Corporate Law, Banking & Finance, and Real Estate."
+      title="Zorinah binti Mohd Sobri - Partner | Gibb Lawyers"
+      description="Meet Zorinah binti Mohd Sobri, Partner at Gibb & Co with over 36 years of legal experience in civil litigation, corporate advisory, and estate administration."
     >
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-secondary/20 to-background py-16 sm:py-20 lg:py-32">
@@ -83,9 +80,9 @@ const ZorinahProfile = () => {
               <div className="relative">
                 <Card className="border border-border/50 overflow-hidden shadow-2xl">
                   <div className="aspect-[3/4] relative">
-                    <img
+                       <img
                       src="https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_PuanZ_thumbnail.jpg"
-                      alt="Zorinah Bt. Mohd Sobri - Managing Partner"
+                      alt="Zorinah binti Mohd Sobri - Partner"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -97,17 +94,22 @@ const ZorinahProfile = () => {
               <div className="space-y-8">
                 <div className="space-y-6">
                   <div className="inline-block px-6 py-2 bg-primary/10 rounded-full border border-primary/20">
-                    <span className="text-sm font-medium text-primary">MANAGING PARTNER</span>
+                    <span className="text-sm font-medium text-primary">PARTNER</span>
                   </div>
                   
                   <h1 className="heading-hero text-4xl sm:text-5xl lg:text-6xl leading-tight">
-                    Zorinah Bt. Mohd Sobri
+                    Zorinah binti Mohd Sobri
                   </h1>
                   
                   <p className="text-xl text-muted-foreground leading-relaxed font-body">
-                    With 29+ years of distinguished legal practice, Zorinah leads our firm with expertise in 
-                    corporate law, banking & finance, and real estate transactions.
+                    Partner | Advocate & Solicitor, High Court of Malaya | Civil Litigation | Corporate Advisory
                   </p>
+                  
+                  <div className="pt-4 border-t border-border/50">
+                    <p className="text-lg text-muted-foreground italic leading-relaxed">
+                      "Justice begins with integrity, and integrity begins with how we serve."
+                    </p>
+                  </div>
                 </div>
 
                 {/* Quick Stats */}
@@ -115,15 +117,15 @@ const ZorinahProfile = () => {
                   <Card className="border border-primary/20 bg-primary/5">
                     <CardContent className="p-6 text-center">
                       <Clock className="h-8 w-8 text-primary mx-auto mb-3" />
-                      <div className="text-2xl font-bold text-primary mb-1">29+</div>
+                      <div className="text-2xl font-bold text-primary mb-1">36+</div>
                       <div className="text-sm text-muted-foreground">Years Experience</div>
                     </CardContent>
                   </Card>
                   <Card className="border border-primary/20 bg-primary/5">
                     <CardContent className="p-6 text-center">
                       <Award className="h-8 w-8 text-primary mx-auto mb-3" />
-                      <div className="text-2xl font-bold text-primary mb-1">500+</div>
-                      <div className="text-sm text-muted-foreground">Transactions Led</div>
+                      <div className="text-2xl font-bold text-primary mb-1">Since 1988</div>
+                      <div className="text-sm text-muted-foreground">Called to Bar</div>
                     </CardContent>
                   </Card>
                 </div>
@@ -149,16 +151,40 @@ const ZorinahProfile = () => {
         </div>
       </section>
 
+      {/* About Section */}
+      <section className="py-16 sm:py-20 lg:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+                About
+              </h2>
+            </div>
+            
+            <Card className="border border-border/50">
+              <CardContent className="p-8 space-y-6">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I am a Partner at Gibb & Co., Advocates & Solicitors, one of Ipoh's most established and respected law firms. Called to the Malaysian Bar in 1988 after completing my LL.B (Hons) from the University of Malaya, I have dedicated my career to the pursuit of justice, professionalism and service to clients.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  With more than three decades of legal experience, my practice encompasses civil and commercial litigation, corporate advisory, and probate and estate administration. I believe in delivering clear, practical and strategic legal solutions grounded in integrity and diligence.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Specializations */}
       <section className="py-16 sm:py-20 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="heading-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Areas of Expertise
+                Practice Areas
               </h2>
               <p className="text-lg text-muted-foreground">
-                Specialized legal services across multiple practice areas
+                Comprehensive legal services grounded in integrity and diligence
               </p>
             </div>
             
@@ -173,7 +199,7 @@ const ZorinahProfile = () => {
         </div>
       </section>
 
-      {/* Education & Credentials */}
+      {/* Education & Professional Values */}
       <section className="py-16 sm:py-20 lg:py-32 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -195,27 +221,28 @@ const ZorinahProfile = () => {
                       {index < education.length - 1 && <div className="w-full h-px bg-border mt-4"></div>}
                     </div>
                   ))}
-                  <div className="mt-6 p-4 bg-primary/5 rounded-lg border border-primary/20">
-                    <p className="text-sm font-medium text-primary">
-                      Called to Malaysian Bar: 1995
-                    </p>
-                  </div>
                 </CardContent>
               </Card>
 
-              {/* Key Achievements */}
+              {/* Professional Values */}
               <Card className="border border-border/50">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3">
                     <Star className="h-6 w-6 text-primary" />
-                    <span>Key Achievements</span>
+                    <span>Professional Values</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  {achievements.map((achievement, index) => (
+                <CardContent className="space-y-6">
+                  <p className="text-muted-foreground leading-relaxed">
+                    I hold fast to the principles of integrity, professionalism, and service—values that define both my work and the ethos of Gibb & Co. My commitment remains to uphold the highest standards of legal excellence while mentoring the next generation of practitioners.
+                  </p>
+                  {professionalValues.map((value, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{achievement}</span>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">{value.title}</h3>
+                        <p className="text-sm text-muted-foreground">{value.description}</p>
+                      </div>
                     </div>
                   ))}
                 </CardContent>
@@ -231,7 +258,7 @@ const ZorinahProfile = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Professional Experience
+                Professional Journey
               </h2>
             </div>
             
@@ -265,7 +292,7 @@ const ZorinahProfile = () => {
               Need Legal Consultation?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Get in touch with Zorinah for expert legal advice on corporate matters, banking & finance, and real estate.
+              Get in touch with Zorinah for expert legal advice on civil litigation, corporate matters, and estate administration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="px-8">
