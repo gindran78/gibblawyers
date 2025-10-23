@@ -156,41 +156,43 @@ const Contact = () => {
                         {office.name}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0 space-y-4">
-                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                        {location.address}
-                      </p>
+                    <CardContent className="pt-0 flex flex-col h-full">
+                      <div className="flex-grow mb-4">
+                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                          {location.address}
+                        </p>
+                      </div>
                       
-                      <div className="space-y-2 sm:space-y-3">
-                        <div className="flex items-center gap-3">
+                      <div className="space-y-2 sm:space-y-3 mb-4">
+                        <div className="flex items-center gap-3 min-h-[44px]">
                           <Phone className="h-4 w-4 text-primary flex-shrink-0" />
                           <a 
                             href={`tel:${location.phone}`} 
-                            className="text-sm sm:text-base text-foreground hover:text-primary transition-colors underline-offset-4 hover:underline min-h-[44px] flex items-center"
+                            className="text-sm sm:text-base text-foreground hover:text-primary transition-colors underline-offset-4 hover:underline flex items-center"
                           >
                             {location.phone}
                           </a>
                         </div>
                         
-                        {location.fax && (
-                          <div className="flex items-center gap-3">
-                            <Phone className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-                            <span className="text-sm sm:text-base text-muted-foreground">F: {location.fax}</span>
-                          </div>
-                        )}
+                        <div className="flex items-center gap-3 min-h-[44px]">
+                          <Phone className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                          <span className="text-sm sm:text-base text-muted-foreground flex items-center">
+                            {location.fax ? `F: ${location.fax}` : '\u00A0'}
+                          </span>
+                        </div>
                         
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 min-h-[44px]">
                           <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                           <a 
                             href={`mailto:${location.email}`} 
-                            className="text-sm sm:text-base text-foreground hover:text-primary transition-colors underline-offset-4 hover:underline min-h-[44px] flex items-center break-all"
+                            className="text-sm sm:text-base text-foreground hover:text-primary transition-colors underline-offset-4 hover:underline flex items-center break-all"
                           >
                             {location.email}
                           </a>
                         </div>
                       </div>
                       
-                      <div className="pt-2">
+                      <div>
                         <a
                           href={location.mapUrl}
                           target="_blank"
