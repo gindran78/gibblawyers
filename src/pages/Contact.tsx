@@ -90,7 +90,7 @@ const Contact = () => {
           phone: "+605 547 1313",
           fax: "+605 548 1313",
           email: "admin@gibblawyers.com",
-          mapUrl: "https://goo.gl/maps/iRwwNmCwdux9ZpfC6"
+          mapUrl: "https://www.google.com/maps/search/?api=1&query=Unit+2,+7th+floor,+Ipoh+Tower,+Jalan+Dato+Seri+Ahmad+Said,+31350+Ipoh"
         }
       ]
     },
