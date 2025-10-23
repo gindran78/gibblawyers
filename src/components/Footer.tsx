@@ -95,18 +95,6 @@ const Footer = () => {
           </Button>
         </div>
 
-        {/* Office Image */}
-        <div className="flex justify-center mb-12 sm:mb-16">
-          <div className="relative max-w-3xl mx-auto">
-            <img 
-              src="/images/office-interior.jpg" 
-              alt="Gibb Lawyers Office Interior" 
-              className="w-full h-48 sm:h-64 lg:h-80 object-cover rounded-2xl shadow-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-          </div>
-        </div>
-
         {/* Copyright */}
         <div className="text-center border-t border-border/50 pt-8 sm:pt-12">
           <div className="space-y-4">
