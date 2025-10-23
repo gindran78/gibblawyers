@@ -161,7 +161,7 @@ const Index = () => {
                 <Button 
                   asChild 
                   size="lg" 
-                  className="glass-intense text-lg px-10 py-6 font-bold tracking-wide min-h-[60px] w-full sm:w-auto hover-lift micro-bounce group relative overflow-hidden"
+                  className="bg-primary/90 backdrop-blur-sm text-lg px-10 py-6 font-bold tracking-wide min-h-[60px] w-full sm:w-auto hover-lift micro-bounce group relative overflow-hidden hover:bg-primary"
                 >
                   <Link to="/contact" className="flex items-center gap-3 relative z-10">
                     <Calendar className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
