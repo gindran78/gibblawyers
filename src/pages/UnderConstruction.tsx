@@ -8,12 +8,12 @@ const UnderConstruction = () => {
       <meta name="description" content="Our website is under construction. We're working hard to improve your experience." />
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-background text-foreground">
         <div className="text-center max-w-2xl mx-auto">
-          {/* Logo */}
+          {/* Hero Image */}
           <div className="mb-12">
             <img 
-              src="/images/gibb-logo.png" 
-              alt="Gibb & Co Logo" 
-              className="h-16 w-auto mx-auto"
+              src="/images/hero-gavel.jpg" 
+              alt="Legal books and gavel representing justice" 
+              className="w-full max-w-3xl mx-auto rounded-lg shadow-2xl"
             />
           </div>
 
