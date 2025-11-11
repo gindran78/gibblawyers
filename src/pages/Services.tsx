@@ -23,16 +23,15 @@ const Services = () => {
   ];
 
   const trainingTopics = [
-    "Understanding the Employment Laws of Brunei Darrussalam",
-    "Safeguarding your company's interest in commercial transactions", 
-    "The role of the Industrial Court",
-    "Assessing documents for Motor Vehicle Accident Claims",
-    "Understanding Termination, Retrenchment & Redundancy",
-    "The role of Adjusters in Motor Vehicle Claims Investigations",
-    "Risk Assessment on Property & Banking Security Documentation",
-    "Recovery Rights of Financial Institutions for Abandoned Projects", 
-    "The Amendments To Improve The Housing Delivery System",
-    "The Architect's Duty Of Care"
+    "Bullying & Sexual Harassment in the work place",
+    "Basic HR for Non-HR Managers/Executive",
+    "HR Compliance incorporating Personal Data Protection and Environmental Social Governance compliance",
+    "Domestic Inquiry training for DI panel and prosecution team",
+    "Leadership and managing teams in the workplace",
+    "Managing Termination and the disciplinary process",
+    "Performance Management",
+    "Personal Data Protection Act training for Companies & Data Protection Officers",
+    "Tailored programs to meet your company's SOP's and compliance requirements"
   ];
 
   return (
@@ -43,7 +42,7 @@ const Services = () => {
       <div className="min-h-screen bg-background">
         {/* Header Section */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/services-hero.jpg')] bg-cover bg-center md:bg-top"></div>
+          <div className="absolute inset-0 bg-[url('/images/heritage/birch-tower.jpg')] bg-cover bg-center md:bg-top"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-background/55 via-background/45 to-background/75 md:from-background/50 md:via-background/30 md:to-background/65"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-background/35 to-background/55 md:from-background/40 md:via-background/25 md:to-background/45"></div>
 
@@ -130,10 +129,13 @@ const Services = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 text-sm text-muted-foreground sm:text-base">
                   <p>
-                    From employment law to construction risk, we run practical sessions that translate legislation into actionable policies and workflows for your teams.
+                    From company compliance to succession, we run practical sessions which translate legislation and case laws into actionable policies and workflow for your teams.
                   </p>
                   <p>
-                    Clients across insurance, banking, and heavy industry rely on our trainers to deliver scenario-based learning that prepares them for real-world decisions.
+                    Our clients across the manufacturing and heavy industries rely on our training expertise to deliver scenario based learning to prepare them for real world decisions.
+                  </p>
+                  <p className="font-semibold text-foreground">
+                    All trainings are fully Human Resource Development Corporation (HRDCorp) claimable
                   </p>
                 </CardContent>
               </Card>
@@ -142,21 +144,16 @@ const Services = () => {
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center gap-3 text-2xl font-semibold text-foreground">
                     <Users className="h-7 w-7 text-primary" />
-                    Recent topics
+                    Our training topics
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  {trainingTopics.slice(0, 6).map((topic) => (
+                  {trainingTopics.map((topic) => (
                     <div key={topic} className="flex items-start gap-3">
                       <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></span>
                       <span className="text-sm text-muted-foreground sm:text-base">{topic}</span>
                     </div>
                   ))}
-                  {trainingTopics.length > 6 && (
-                    <p className="pt-2 text-sm italic text-muted-foreground sm:text-base">
-                      …plus {trainingTopics.length - 6} additional programmes tailored to specific sectors.
-                    </p>
-                  )}
                 </CardContent>
               </Card>
             </div>

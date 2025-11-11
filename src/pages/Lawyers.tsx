@@ -7,7 +7,7 @@ const Lawyers = () => {
   const lawyers = [
     {
       name: "ZORINAH BT.MOHD SOBRI",
-      position: "PARTNER",
+      position: "SENIOR PARTNER",
       image: "https://gibblawyers.com/wp-content/uploads/2021/04/GIBB_PuanZ_thumbnail.jpg",
       url: "/lawyers/zorinah-mohd-sobri",
       credentials: "LLB (Hons), University of Malaya • Called to Malaysian Bar 1988",
@@ -68,17 +68,17 @@ const Lawyers = () => {
           <div className="mx-auto flex max-w-4xl flex-col overflow-hidden rounded-3xl bg-background/95 shadow-lg ring-1 ring-border/30 md:flex-row">
             <img
               src="/images/heritage/william-ernest-balasingam.jpg"
-              alt="Williams Ernest Balasingam"
+              alt="William Ernest Balasingam"
               className="h-72 w-full object-cover md:h-auto md:w-64"
               loading="lazy"
             />
             <div className="flex flex-1 flex-col justify-center gap-4 p-6 sm:p-8">
               <span className="inline-flex w-max items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-                Legacy in chambers
+                Legacy in Chamber
               </span>
-              <h2 className="text-2xl font-bold text-foreground sm:text-3xl">Williams Ernest Balasingam</h2>
+              <h2 className="text-2xl font-bold text-foreground sm:text-3xl">William Ernest Balasingam</h2>
               <p className="text-sm text-muted-foreground sm:text-base">
-                Called in 1960 and leading Gibb &amp; Co until 2004, Williams Ernest Balasingam embodied the Inns of Court traditions we carry into every mandate today.
+                Called to the Bar in 1960 and leading Gibb &amp; Co until 2004, William Ernest Balasingam embodied the Inns of Court traditions we carry into every mandate today.
               </p>
             </div>
           </div>

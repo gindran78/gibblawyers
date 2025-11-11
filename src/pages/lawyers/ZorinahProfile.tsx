@@ -45,7 +45,7 @@ const ZorinahProfile = () => {
   const experience = [
     {
       period: "1988 - Present",
-      role: "Partner",
+      role: "Senior Partner",
       company: "Gibb & Co., Advocates & Solicitors",
       description: "Throughout my practice, I have represented individuals and corporations, providing guidance on property transactions, commercial contracts, and dispute resolution. My approach is client-centric, pragmatic, and built on trust and long-term relationships."
     }
@@ -68,8 +68,8 @@ const ZorinahProfile = () => {
 
   return (
     <Layout 
-      title="Zorinah binti Mohd Sobri - Partner | Gibb Lawyers"
-      description="Meet Zorinah binti Mohd Sobri, Partner at Gibb & Co with over 36 years of legal experience in civil litigation, corporate advisory, and estate administration."
+      title="Zorinah binti Mohd Sobri - Senior Partner | Gibb Lawyers"
+      description="Meet Zorinah binti Mohd Sobri, Senior Partner at Gibb & Co with over 36 years of legal experience in civil litigation, corporate advisory, and estate administration."
     >
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-secondary/20 to-background py-16 sm:py-20 lg:py-32">
@@ -94,7 +94,7 @@ const ZorinahProfile = () => {
               <div className="space-y-8">
                 <div className="space-y-6">
                   <div className="inline-block px-6 py-2 bg-primary/10 rounded-full border border-primary/20">
-                    <span className="text-sm font-medium text-primary">PARTNER</span>
+                    <span className="text-sm font-medium text-primary">SENIOR PARTNER</span>
                   </div>
                   
                   <h1 className="heading-hero text-4xl sm:text-5xl lg:text-6xl leading-tight">
@@ -102,7 +102,7 @@ const ZorinahProfile = () => {
                   </h1>
                   
                   <p className="text-xl text-muted-foreground leading-relaxed font-body">
-                    Partner | Advocate & Solicitor, High Court of Malaya | Civil Litigation | Corporate Advisory
+                    Senior Partner | Advocate & Solicitor, High Court of Malaya | Civil Litigation | Corporate Advisory
                   </p>
                   
                   <div className="pt-4 border-t border-border/50">
@@ -169,7 +169,7 @@ const ZorinahProfile = () => {
             <Card className="border border-border/50">
               <CardContent className="p-8 space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Zorinah binti Mohd Sobri is a Partner at Gibb & Co., one of Ipoh’s longest-standing firms. Called to the Malaysian Bar in 1988 after completing her LL.B (Hons) at the University of Malaya, she has dedicated more than three decades to advancing justice through professionalism and service.
+                  Zorinah binti Mohd Sobri is a Senior Partner at Gibb & Co., one of Ipoh’s longest-standing firms. Called to the Malaysian Bar in 1988 after completing her LL.B (Hons) at the University of Malaya, she has dedicated more than three decades to advancing justice through professionalism and service.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Her practice spans civil and commercial litigation, corporate and contract advisory, and probate and estate administration. She is recognised for delivering clear, practical strategies grounded in integrity and diligence.

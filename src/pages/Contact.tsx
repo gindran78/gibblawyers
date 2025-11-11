@@ -14,7 +14,7 @@ const Contact = () => {
     >
       {/* Header Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/office-main.jpg')] bg-cover bg-center md:bg-top"></div>
+        <div className="absolute inset-0 bg-[url('/images/heritage/Ipoh_Town_Hall_Malaysia.jpg')] bg-cover bg-top"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-background/55 via-background/45 to-background/75 md:from-background/50 md:via-background/30 md:to-background/65"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-background/35 to-background/55 md:from-background/40 md:via-background/25 md:to-background/45"></div>
 
