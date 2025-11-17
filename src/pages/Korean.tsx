@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Building, MapPin, Phone, Mail, Download } from 'lucide-react';
+import { Building, MapPin, Phone, Mail } from 'lucide-react';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Korean = () => {
@@ -174,20 +174,14 @@ const Korean = () => {
                   </div>
                 </Card>
 
-                <div className="space-y-4">
+                <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  <p>
+                    빠르게 안내를 받고 싶으신가요? WhatsApp으로 메시지를 남겨주시면 담당 변호사가 맞춤 정보를 준비해 드립니다.
+                  </p>
                   <WhatsAppButton
                     label="WhatsApp 문의"
                     className="w-full min-h-[52px] text-base font-semibold"
                   />
-
-                  <Button 
-                    variant="outline" 
-                    className="w-full min-h-[52px] text-base font-semibold border-primary/30"
-                    onClick={() => window.open('https://gibblawyers.com/wp-content/uploads/2024/06/GIBB-PROFILE_book2024_Digital_V02.pdf', '_blank')}
-                  >
-                    <Download className="mr-2 h-5 w-5" />
-                    회사 프로필 다운로드
-                  </Button>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { Building2, MapPin, ExternalLink, Download } from 'lucide-react';
+import { Building2, MapPin, ExternalLink } from 'lucide-react';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { OFFICES } from '@/data/offices';
 
@@ -59,30 +59,16 @@ const Footer = () => {
           })}
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16">
+        {/* Action Button */}
+        <div className="flex flex-col items-center text-center gap-4 sm:gap-6 mb-12 sm:mb-16">
+          <p className="text-sm text-muted-foreground max-w-2xl">
+            Prefer a personal introduction? Reach out on WhatsApp and our team will share the right information for your needs.
+          </p>
           <WhatsAppButton
             size="lg"
             label="ENQUIRE ON WHATSAPP"
             className="min-h-[52px] w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           />
-
-          <Link
-            to="https://gibblawyers.com/wp-content/uploads/2024/06/GIBB-PROFILE_book2024_Digital_V02.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="min-h-[52px] w-full sm:w-auto"
-          >
-            <div className="flex h-full items-center justify-center">
-              <button
-                className="flex items-center justify-center gap-2 text-base min-h-[52px] w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 font-semibold border-2 rounded-md border-primary/40 text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
-                type="button"
-              >
-                <Download className="h-5 w-5 flex-shrink-0" />
-                <span>DOWNLOAD FIRM PROFILE</span>
-              </button>
-            </div>
-          </Link>
         </div>
 
         {/* Copyright */}

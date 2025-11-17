@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Building, MapPin, Phone, Mail, Download } from 'lucide-react';
+import { Building, MapPin, Phone, Mail } from 'lucide-react';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Chinese = () => {
@@ -174,19 +174,14 @@ const Chinese = () => {
                   </div>
                 </Card>
 
-                <div className="space-y-4">
+                <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  <p>
+                    想快速了解我们？发送 WhatsApp 讯息，我们将安排合适的律师团队联系您，并提供最相关的资料。
+                  </p>
                   <WhatsAppButton
                     label="WhatsApp 咨询"
                     className="w-full min-h-[52px] text-base font-semibold"
                   />
-                  <Button
-                    variant="outline"
-                    className="w-full min-h-[52px] text-base font-semibold border-primary/30"
-                    onClick={() => window.open('https://gibblawyers.com/wp-content/uploads/2024/06/GIBB-PROFILE_book2024_Digital_V02.pdf', '_blank')}
-                  >
-                    <Download className="mr-2 h-5 w-5" />
-                    下载公司简介
-                  </Button>
                 </div>
               </div>
             </div>
